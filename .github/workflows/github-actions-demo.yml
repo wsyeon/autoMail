@@ -2,7 +2,7 @@ name: Auto Mail Month
 
 on:
   schedule:
-    - cron: "48 19 * * *" #분 시 일 월 요일 오후 10시(utc 기준)
+    - cron: "54 19 * * *" #분 시 일 월 요일 오후 10시(utc 기준)
   workflow_dispatch:
 
 jobs:
@@ -28,6 +28,6 @@ jobs:
           echo "EMAIL_RECEIVER=$EMAIL_RECEIVER" >> .env
           node autoEmail.js
         env:
-          EMAIL_USER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_PWD: ${{ secrets.EMAIL_PWD }}
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
