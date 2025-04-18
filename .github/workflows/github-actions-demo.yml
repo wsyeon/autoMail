@@ -3,6 +3,7 @@ name: Auto Mail Month
 on:
   schedule:
     - cron: "*/1 * * * *" #분 시 일 월 요일
+  workflow_dispatch:
 
 jobs:
   scheduled-job:
