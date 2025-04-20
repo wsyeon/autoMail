@@ -15,7 +15,7 @@ const message = {
   from: process.env.EMAIL_SENDER,
   to: process.env.EMAIL_SENDER,
   subject: "Test",
-  text: `현재 시간 ${date.getHours()}시-TEST`,
+  text: `현재 시간 ${date.getHours() + 9}시-TEST`,
 };
 
 const autoMail = (mail) =>
