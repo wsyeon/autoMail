@@ -1,6 +1,7 @@
 require("dotenv").config();
 
-const nodemailer = require("nodemailer"); // 모듈 import
+const nodemailer = require("nodemailer");
+const date = new Date();
 
 const email = {
   service: "gmail",
@@ -14,7 +15,7 @@ const message = {
   from: process.env.EMAIL_SENDER,
   to: process.env.EMAIL_SENDER,
   subject: "Test",
-  text: "TEST",
+  text: `현재 시간 ${date.getHours()}시-TEST`,
 };
 
 const autoMail = (mail) =>
