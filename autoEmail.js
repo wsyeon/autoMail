@@ -2,6 +2,9 @@ require("dotenv").config();
 
 const nodemailer = require("nodemailer");
 const date = new Date();
+const dataTEXT = require("./text.json");
+
+const TEXT = dataTEXT[date.getMonth() + 1][date.getDate()].text;
 
 const email = {
   service: "gmail",
@@ -13,9 +16,9 @@ const email = {
 
 const message = {
   from: process.env.EMAIL_SENDER,
-  to: process.env.EMAIL_SENDER,
+  to: "ben050422@naver.com",
   subject: "Test",
-  text: `현재 시간 ${date.getHours() + 9}시-TEST`,
+  text: TEXT,
 };
 
 const autoMail = (mail) =>
