@@ -16,7 +16,7 @@ const email = {
 
 const message = {
   from: process.env.EMAIL_SENDER,
-  to: "ben050422@naver.com",
+  to: "nyj14196@naver.com",
   subject: "Test",
   text: TEXT,
 };
