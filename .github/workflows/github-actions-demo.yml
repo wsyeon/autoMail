@@ -2,7 +2,7 @@ name: Auto Mail Month
 
 on:
   schedule:
-    - cron: "0 11 * * *" #분 시 일 월 요일(매일 오후 4시 발송)
+    - cron: "0 11 * * *" #분 시 일 월 요일(매일 오후 8시 발송)
   workflow_dispatch:
 
 jobs:
