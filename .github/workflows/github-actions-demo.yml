@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Create text.json from secret
-        run: echo '${{ secrets.TEXT_JSON }}' > text.json
+        run: printf "%s" "${{ secrets.TEXT_JSON }}" > text.json
 
       - name: Run mail script
         run: |
