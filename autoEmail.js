@@ -4,8 +4,7 @@ const nodemailer = require("nodemailer");
 const date = new Date();
 const dataTEXT = require("./text.json");
 
-// const TEXT = dataTEXT[date.getMonth() + 1][date.getDate()];
-const TEXT = dataTEXT["5"][15];
+const TEXT = dataTEXT[date.getMonth() + 1][date.getDate()];
 
 const email = {
   service: "gmail",
@@ -17,7 +16,7 @@ const email = {
 
 const message = {
   from: process.env.EMAIL_SENDER,
-  to: "sywon2005@gmail.com",
+  to: process.env.EMAIL_RECEIVER,
   subject: TEXT.subject,
   text: TEXT.text,
 };
