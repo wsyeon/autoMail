@@ -5,7 +5,7 @@ const date = new Date();
 const dataTEXT = require("./text.json");
 
 // const TEXT = dataTEXT[date.getMonth() + 1][date.getDate()];
-const TEXT = dataTEXT[4][28];
+const TEXT = dataTEXT["5"][15];
 
 const email = {
   service: "gmail",
